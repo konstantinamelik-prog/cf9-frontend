@@ -21,5 +21,6 @@ export class Step10TemplateDriverForms {
   onPerson(data: IPerson){
     this.currentPerson = data;
     this.persons.push(data);
+    console.log("STEP10", this.persons);
   }
 }
