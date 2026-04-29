@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Step10TemplateDriverForms } from './step10-template-driver-forms';
+import { Step10TemplateDriverForms } from './step10-template-driven-forms';
 
 describe('Step10TemplateDriverForms', () => {
   let component: Step10TemplateDriverForms;
