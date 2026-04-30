@@ -1,17 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Step10TemplateDriverForms } from './step10-template-driven-forms';
+import { Step10TemplateDrivenForms } from './step10-template-driven-forms';
 
-describe('Step10TemplateDriverForms', () => {
-  let component: Step10TemplateDriverForms;
-  let fixture: ComponentFixture<Step10TemplateDriverForms>;
+describe('Step10TemplateDrivenForms', () => {
+  let component: Step10TemplateDrivenForms;
+  let fixture: ComponentFixture<Step10TemplateDrivenForms>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [Step10TemplateDriverForms],
+      imports: [Step10TemplateDrivenForms],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(Step10TemplateDriverForms);
+    fixture = TestBed.createComponent(Step10TemplateDrivenForms);
     component = fixture.componentInstance;
     await fixture.whenStable();
   });
