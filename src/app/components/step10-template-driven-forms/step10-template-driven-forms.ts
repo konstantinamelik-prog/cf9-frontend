@@ -20,7 +20,7 @@ export class Step10TemplateDrivenForms {
 
   onPerson(data: IPerson){
     this.currentPerson = data;
-    // this.persons.push(data);
+    // this.persons.push(data); δεν καταλαβαινει ότι έχει αλλαγές
     this.persons = [...this.persons, data];
     // console.log("STEP10",this.persons);
   }
