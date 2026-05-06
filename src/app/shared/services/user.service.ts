@@ -50,21 +50,19 @@ export class UserService {
     this.router.navigate(['user-login']);
   }
 
+  isTokenExpired(): boolean {
+    const token = localStorage.getItem('access_token');
+    if (!token)
+      return true
 
-
-  // isTokenExpired(): boolean {
-  //   const token = localStorage.getItem('access_token');
-  //   if (!token)
-  //     return true
-
-  //   try {
-  //     const decoded: any =  jwtDecode(token);
-  //     console.log("DECODED", decoded);
-  //     const exp = decoded.exp;
-  //     const now = Math.floor(Date.now()/1000);
-  //     return exp < now
-  //   } catch (e){
-  //     return true
-  //   }
-  // }
+    try {
+      const decoded: any =  jwtDecode(token);
+      console.log("DECODED", decoded);
+      const exp = decoded.exp;
+      const now = Math.floor(Date.now()/1000);
+      return exp < now
+    } catch (e){
+      return true
+    }
+  }
 }
