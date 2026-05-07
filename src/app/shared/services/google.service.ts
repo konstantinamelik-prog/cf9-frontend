@@ -35,15 +35,15 @@ export class GoogleService {
     this.loginGoogle(idToken)
       .subscribe({
         next: (res) =>{
-          console.log(res)
-    //       const decodedToken= jwtDecode(res.token) as IGoogleUser;
-    //       console.log(decodedToken);
-    //       localStorage.setItem('google-access-token', res.token);
-    //       this.userService.user.set({
-    //         username: decodedToken.name,
-    //         email: decodedToken.email,
-    //         roles: decodedToken.roles
-    //       })
+          // console.log(res)
+          const decodedToken= jwtDecode(res.token) as IGoogleUser;
+          console.log(decodedToken);
+          localStorage.setItem('google-access-token', res.token);
+          this.userService.user.set({
+            username: decodedToken.name,
+            email: decodedToken.email,
+            roles: decodedToken.roles
+          })
         },
         error: (err) => console.log("Problem in google login", err)
       })
